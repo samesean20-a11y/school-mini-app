@@ -4,51 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>កម្មវិធីសាលារៀន</title>
-    <!-- បញ្ចូល Telegram Web App SDK ដើម្បីឱ្យវាស្គាល់ Telegram -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         body {
             font-family: 'Khmer OS Siemreap', Arial, sans-serif;
             background-color: #f0f2f5;
-            text-align: center;
-            padding: 20px;
+            padding: 15px;
             margin: 0;
+            text-align: center;
         }
         .card {
             background: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-top: 50px;
+            margin-bottom: 15px;
         }
-        button {
+        /* រចនា Logo សាលាឱ្យមូលស្អាត */
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        /* រចនាតារាង */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
             background-color: #2481cc;
             color: white;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <h2>សួស្ដី! សាលាបឋមសិក្សាហ៊ុនសែនមិត្តភាព</h2>
-        <p>សូមស្វាគមន៍មកកាន់ Telegram Mini App របស់យើង។</p>
-        <button onclick="sayHello()">ចុចទីនេះ</button>
+        <!-- ដាក់រូប Logo សាលា (ជំនួសតំណភ្ជាប់រូបភាពរបស់អ្នកនៅត្រង់ src) -->
+        <img src="https://via.placeholder.com/80" alt="Logo សាលា" class="logo">
+        
+        <h2>សាលាបឋមសិក្សាហ៊ុនសែនមិត្តភាព</h2>
+        <p>ប្រព័ន្ធគ្រប់គ្រង និងព័ត៌មានសាលារៀន</p>
+    </div>
+
+    <div class="card">
+        <h3>តារាងវត្តមាន ឬកាលវិភាគ</h3>
+        <table>
+            <tr>
+                <th>ថ្ងៃ</th>
+                <th>ម៉ោងសិក្សា</th>
+                <th>មុខវិជ្ជា</th>
+            </tr>
+            <tr>
+                <td>ច័ន្ទ</td>
+                <td>០៧:៣០ - ១១:០០</td>
+                <td>ភាសាខ្មែរ</td>
+            </tr>
+            <tr>
+                <td>អង្គារ</td>
+                <td>០៧:៣០ - ១១:០០</td>
+                <td>គណិតវិទ្យា</td>
+            </tr>
+        </table>
     </div>
 
     <script>
-        // កូដ JavaScript ដើម្បីឱ្យ Telegram បង្ហាញសារពេលចុចប៊ូតុង
         let tg = window.Telegram.WebApp;
-        tg.expand(); // ពង្រីកទំព័រឱ្យពេញអេក្រង់
-
-        function sayHello() {
-            alert("អរគុណសម្រាប់ការសាកល្បង Telegram Mini App!");
-        }
+        tg.expand();
     </script>
 
 </body>
